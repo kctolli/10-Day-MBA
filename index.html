@@ -15,8 +15,8 @@
         <section>
             <h2>Day 1: Marketing</h2>
             <p>Marketing a special blend of art and science.</p>
-            <button onclick="showHide()">Marketing Strategy</button>
-            <div id="hide" style="display: none;">
+            <button onclick="showHide('marketing')">Marketing Strategy</button>
+            <div id="marketing" style="display: none;">
                 Part internally consistent and mutually supportive of the objectives.
                 <ol>
                     <li>Consumer Analysis
@@ -97,31 +97,31 @@
         <section>
             <h2>Day 2: Ethics</h2>
             <div>
-                <h3>Relativism</h3>
-                <p>Relativism proposes that ethics are “relative” to the personal, social, and cultural circumstances in which one finds oneself.</p>
-                <ul>
-                    <li>Naive relativism holds that every person has his or her own standard that enables him or her to make choices.</li>
-                    <li>Role relativism distinguishes between our private selves and our public roles.</li>
-                    <li>Social relativism is akin to naive relativism - People refer to social norms to render ethical judgments.</li>
-                    <li>Cultural relativism holds that there is no universal moral code by which to judge another society's moral and ethical standards.</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Stakeholder Analysis</h3>
-                <p>Stakeholder analysis provides you with the tools for weighing various elements and reaching a decision.</p>
-                <ol>
-                    <li>Get the main cast of characters</li>
-                    <li>Determine the harms and benefits to each player</li>
-                    <li>Determine their rights and responsibilities</li>
-                    <li>Consider the relative power of each</li>
-                    <li>Consider the short- and long-term consequences of your decision alternatives</li>
-                    <li>Formulate contingency plans for alternative scenarios</li>
-                    <li>Make a judgment</li>
-                </ol>
-            </div>
-            <div>
-                <h3>The Sarbanes-Oxley Act of 2002 (SOX)</h3>
-                <ul>
+                <button onclick="showHide('relativism'); hide('stakeholder'); hide('sox');">Relativism</button>
+                <button onclick="hide('relativism'); showHide('stakeholder'); hide('sox');">Stakeholder Analysis</button>
+                <button onclick="hide('relativism'); hide('stakeholder'); showHide('sox');">The Sarbanes-Oxley Act of 2002 (SOX)</button>
+                <div style="display: none;" id="relativism">
+                    <p>Relativism proposes that ethics are “relative” to the personal, social, and cultural circumstances in which one finds oneself.</p>
+                    <ul>
+                        <li>Naive relativism holds that every person has his or her own standard that enables him or her to make choices.</li>
+                        <li>Role relativism distinguishes between our private selves and our public roles.</li>
+                        <li>Social relativism is akin to naive relativism - People refer to social norms to render ethical judgments.</li>
+                        <li>Cultural relativism holds that there is no universal moral code by which to judge another society's moral and ethical standards.</li>
+                    </ul>
+                </div>
+                <div style="display: none;" id="stakeholder">
+                    <p>Stakeholder analysis provides you with the tools for weighing various elements and reaching a decision.</p>
+                    <ol>
+                        <li>Get the main cast of characters</li>
+                        <li>Determine the harms and benefits to each player</li>
+                        <li>Determine their rights and responsibilities</li>
+                        <li>Consider the relative power of each</li>
+                        <li>Consider the short- and long-term consequences of your decision alternatives</li>
+                        <li>Formulate contingency plans for alternative scenarios</li>
+                        <li>Make a judgment</li>
+                    </ol>
+                </div>
+                <ul style="display: none;" id="sox">
                     <li>Financial Accounting Rules
                       <ul>
                         <li>The audit committee must consist solely of independent directors and at least one financial expert</li>
@@ -171,44 +171,42 @@
                     <li>The statements can be interpreted by using ratios</li>
                     <li>Operating results can be analyzed and managed using variances</li>
                 </ul>
-            </div>
-            <div>
-                <h3>Types of Accounting</h3>
-                <ul>
+                <button onclick="showHide('acct-types'); hide('acct-ratios');">Types of Accounting</button>
+                <button onclick="showHide('acct-ratios'); hide('acct-types');">Financial Ratios</button>
+                <ul style="display: none;" id="acct-types">
                     <li>Cash Basis Accounting: The method of recording transactions only when cash changes hands</li>
                     <li>Accrual Basis Accounting: The method of recording transactions that match revenues and expenses regardless of cash flow movements</li>
                     <li>Managerial Accounting: Uses accounting data to manage and analyze operations; Uses standards, budgets, and variances to run the business and explain operational results</li>
                 </ul>
-            </div>
-            <div>
-                <h3>Financial Ratios</h3>
-                <p>A method of analyzing statements and comparing them to industry standards</p>
-                <ul>
-                    <li>Liquidity measures: How much is on hand that can be converted to cash to pay the bills?
-                      <ul>
-                        <li>Current Ratio = Current Assets / Current Liabilities</li>
-                      </ul>
-                    </li>
-                    <li>Capitalization measures: Is a company heavily burdened with debt? Are its investors financing the company? How is the company funding itself?
-                      <ul>
-                        <li>Financial Leverage = (Total Liabilities + Owners' Equity) / OE</li>
-                        <li>Long-Term Debt to Capital = Long-Term Debt / (Liabilities + OE)</li>
-                      </ul>
-                    </li>
-                    <li>Activity measures: How actively are the firm's assets being deployed? (MBAs deploy assets, rather than just use them.)
-                      <ul>
-                        <li>Assets Turnover per Period = Sales / Total Assets</li>
-                        <li>Inventory Turns per Period = Cost of Goods Sold / Average Inventory Held During the Period</li>
-                        <li>Days Sales in Inventory = Ending Inventory / (Cost of Goods Sold / 365)</li>
-                      </ul>
-                    </li>
-                    <li>Profitability measures: How profitable is a company in relation to the assets and the sales that made its profits possible?
-                      <ul>
-                        <li>Return on Sales (ROS) = Net Income / Sales</li>
-                        <li>Return on Equity (ROE) = Net Income / Owners' Equity</li>
-                      </ul>
-                    </li>
-                </ul>
+                <div style="display: none;" id="acct-ratios">
+                    <p>A method of analyzing statements and comparing them to industry standards</p>
+                    <ul>
+                        <li>Liquidity measures: How much is on hand that can be converted to cash to pay the bills?
+                        <ul>
+                            <li>Current Ratio = Current Assets / Current Liabilities</li>
+                        </ul>
+                        </li>
+                        <li>Capitalization measures: Is a company heavily burdened with debt? Are its investors financing the company? How is the company funding itself?
+                        <ul>
+                            <li>Financial Leverage = (Total Liabilities + Owners' Equity) / OE</li>
+                            <li>Long-Term Debt to Capital = Long-Term Debt / (Liabilities + OE)</li>
+                        </ul>
+                        </li>
+                        <li>Activity measures: How actively are the firm's assets being deployed? (MBAs deploy assets, rather than just use them.)
+                        <ul>
+                            <li>Assets Turnover per Period = Sales / Total Assets</li>
+                            <li>Inventory Turns per Period = Cost of Goods Sold / Average Inventory Held During the Period</li>
+                            <li>Days Sales in Inventory = Ending Inventory / (Cost of Goods Sold / 365)</li>
+                        </ul>
+                        </li>
+                        <li>Profitability measures: How profitable is a company in relation to the assets and the sales that made its profits possible?
+                        <ul>
+                            <li>Return on Sales (ROS) = Net Income / Sales</li>
+                            <li>Return on Equity (ROE) = Net Income / Owners' Equity</li>
+                        </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
         <section>
@@ -231,6 +229,36 @@
         </section>
         <section>
             <h2>Day 10: MBA Minicourses</h2>
+            <div>
+                <h3>Research and Competitive Intelligence Gathering</h3>
+            </div>
+            <div>
+                <h3>Public Speaking</h3>
+            </div>
+            <div>
+                <h3>Negotiating</h3>
+            </div>
+            <div>
+                <h3>International Business</h3>
+            </div>
+            <div>
+                <h3>MBA Movie Guide</h3>
+            </div>
+            <div>
+                <h3>Business Law</h3>
+            </div>
+            <div>
+                <h3>Business Writing</h3>
+            </div>
+            <div>
+                <h3>Real Estate Investor</h3>
+            </div>
+            <div>
+                <h3>Leadership Coach</h3>
+            </div>
+            <div>
+                <h3>Financial Planner</h3>
+            </div>
         </section>
     </main>
     <footer>
