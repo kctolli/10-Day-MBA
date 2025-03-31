@@ -1,0 +1,16 @@
+{
+  "name": "ten-day-mba",
+  "module": "index.ts",
+  "type": "module",
+  "main": "/site/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pub": "source ./codebuild/deploy.sh"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
