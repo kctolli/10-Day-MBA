@@ -3,12 +3,14 @@ const assets = [
   "/",
   "/index.html",
   "/manifest.json",
-  "/assets/UVU.png",
-  "/assets/footer.js",
-  "/assets/worker.js",
-  "/bootcamp",
-  "/courses",
-  "/materials",
+  "/serviceWorker.js",
+  "/assets/",  
+  "/assets/index.js",
+  "/assets/index.css",
+  "/assets/The_Ten-day_MBA_3E.pdf",
+  "/assets/marketing_strategy_development.png",
+  "/assets/icons/",
+  "/assets/icons/icon.png",
 ];
 
 self.addEventListener("install", installEvent => {
