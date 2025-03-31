@@ -10,6 +10,7 @@ import Day9 from "./Day9";
 import Day10 from "./Day10";
 
 import Podcasts from "./Podcasts";
+import Nav from "./Nav";
 
 const Days = {
     Day1: Day1,
@@ -24,6 +25,6 @@ const Days = {
     Day10: Day10
 }
 
-const components = { Days, Podcasts };
+const components = { Days, Podcasts, Nav };
 
 export default components;

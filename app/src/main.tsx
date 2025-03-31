@@ -1,21 +1,21 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
-import App from './App.tsx';
 import Components from './components/main.ts';
 
 import './index.css';
 
-const { Days, Podcasts } = Components;
+const { Days, Podcasts, Nav } = Components;
 
 const root = createRoot(document.getElementById('root') as HTMLElement);
 
 root.render(
   <StrictMode>
     <BrowserRouter basename='/'>
+      <Nav />
       <Routes>
-        <Route index element={<App />}/>
+        <Route index element={<Navigate to='day1'/>} />
         <Route path='podcasts' element={<Podcasts />}/>
         <Route path='day1' element={<Days.Day1 />} />
         <Route path='day2' element={<Days.Day2 />} />

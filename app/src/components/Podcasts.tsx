@@ -45,7 +45,7 @@ const links = [
     }
 ];
 
-const listLinks = ({link}: {link: {name: string, url?: string}}) => (
+const ListLinks = ({link}: {link: {name: string, url?: string}}) => (
     <li>
         <a 
             href={`https://open.spotify.com/episode/${link.url}`} 
@@ -59,7 +59,7 @@ export default function Podcasts() {
     return (
         <>
             <h2>Podcasts</h2>
-            <ul>{links.map((link: any) => listLinks(link))}</ul>
+            <ul>{links.map((link: any) => <ListLinks link={link}/>)}</ul>
         </>
     );
 }
