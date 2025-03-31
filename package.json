@@ -4,7 +4,6 @@
   "type": "module",
   "main": "/site/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "pub": "source ./codebuild/deploy.sh"
   },
   "devDependencies": {
