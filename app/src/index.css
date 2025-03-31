@@ -1,0 +1,18 @@
+header, footer {
+  text-align: center;
+}
+
+@media print{
+  footer {
+    display: none;
+  }
+  .noprint {
+    display: none ! important;
+  }
+}
+
+@media screen {
+  .onlyprint {
+    display: none;
+  }
+}
